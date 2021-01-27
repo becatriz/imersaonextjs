@@ -1,0 +1,25 @@
+{
+  "name": "with-styled-components",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "image-loader": "^0.0.1",
+    "next": "latest",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-is": "^16.8.0",
+    "styled-components": "^5.0.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0"
+  },
+  "license": "MIT"
+}
