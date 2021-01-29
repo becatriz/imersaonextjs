@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import db from "../db.json";
+import Head from "next/head";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -30,6 +31,20 @@ const theme = db.theme;
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>Quiz musical</title>
+        <meta property="og:title" content="Quiz musical" key="title" />
+        <meta
+          property="og:image"
+          content="https://cdn.pixabay.com/photo/2019/10/20/21/21/close-up-4564714_960_720.jpg"
+          key="title"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />

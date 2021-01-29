@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardOne = styled.div`
   width: 240px;
-  height: 250px;
+  height: 350px;
   background-color: #000;
   position: relative;
   border-radius: 10px;
@@ -32,7 +32,7 @@ export const CardOne = styled.div`
 
 export const CardTwo = styled.div`
   width: 240px;
-  height: 250px;
+  height: 350px;
   background-color: #9c3b3b;
   position: relative;
   border-radius: 10px;
@@ -63,7 +63,7 @@ export const CardTwo = styled.div`
 
 export const CardThree = styled.div`
   width: 240px;
-  height: 250px;
+  height: 350px;
   background-color: #000;
   position: relative;
   border-radius: 10px;
@@ -94,7 +94,7 @@ export const CardThree = styled.div`
 
 export const CardFour = styled.div`
   width: 240px;
-  height: 250px;
+  height: 350px;
   background-color: #9c3b3b;
   position: relative;
   border-radius: 10px;

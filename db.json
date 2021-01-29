@@ -17,12 +17,39 @@
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
+        "title": "Como se chama a musica mais favosa do Pereira?",
+        "description": "Faz tempo em haha",
+        "answer": 3,
+        "alternatives": [
+           "A musa do verão",
+           "A musa de agosto",
+           "Salve o Corinthias",
+           "Liberade Liberade"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual a Musica de Discoteca",
+        "description": "Faz tempo em haha",
+        "answer": 2,
+        "alternatives": [
+           "Discoteca 1",
+           "Discoteca 2",
+           "Discoteca 3",
+           "Discoteca 4"
+           
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "De quem é a música Shallow Now",
         "description": "Faz tempo em haha",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Lady Gaga",
+           "Beyonce",
+           "Paula Fernandes",
+           "Rhianna"
         ]
       }
     ],
