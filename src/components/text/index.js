@@ -4,7 +4,7 @@ const Text = styled.span`
   text-align: center;
   justify-content: center;
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 `;
 

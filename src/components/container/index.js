@@ -9,8 +9,15 @@ const Container = styled.div`
   justify-content: center;
   padding: 50px;
   width: 88%;
-  border: 1px solid #6b1a1a;
-  box-shadow: 5px 10px #6b1a1a;
+  border: 1px solid #5d5d99;
+  box-shadow: 5px 10px #5d5d99;
+  border-radius: 10px;
+
+  @media (max-width: 600px) {
+    background-color: #111112;
+    width: 100%;
+    display: block;
+  }
 `;
 
 export default Container;

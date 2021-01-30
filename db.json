@@ -4,52 +4,48 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "title": "A música 'I Fell In Love With The Devil' é de qual cantora canadense ?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Alanis Morissette",
+          "Dido's",
+          "Avril Lavigne",
+          "Britney Spears"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como se chama a musica mais favosa do Pereira?",
-        "description": "Faz tempo em haha",
+        "title": "Quem foi o baixista dos Beatles de 1958 até 1970?",
+        "description": "Essa só fã sabe",
         "answer": 3,
         "alternatives": [
-           "A musa do verão",
-           "A musa de agosto",
-           "Salve o Corinthias",
-           "Liberade Liberade"
+           "Paul McCartney",
+           "Ringo Starr",
+           "John Lennon",
+           "George Harrison"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Qual a Musica de Discoteca",
-        "description": "Faz tempo em haha",
-        "answer": 2,
+        "title": "Qual o nome do vocalista da banda Foo Fighters?",
+        "description": "Se não souber essa, não é fã",
+        "answer": 1,
         "alternatives": [
-           "Discoteca 1",
-           "Discoteca 2",
-           "Discoteca 3",
-           "Discoteca 4"
+           "Taylor Hawkins",
+           "Dave Grohl",
+           "Krist Novoselic",
+           "Mick Jagger"
            
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "De quem é a música Shallow Now",
-        "description": "Faz tempo em haha",
+        "title": "Qual o nome do último álbum lançado da banda S.O.A.D?",
+        "description": "Essa é pros jovi...SQN",
         "answer": 0,
         "alternatives": [
-           "Lady Gaga",
-           "Beyonce",
-           "Paula Fernandes",
-           "Rhianna"
+           "Hypnotize",
+           "Steal This Album!",
+           "Toxicity",
+           "Mezmerize"
         ]
       }
     ],

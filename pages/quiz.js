@@ -15,6 +15,8 @@ import { useState, useEffect } from "react";
 
 export default function Quiz() {
   let selected;
+  let pointsPlayer1 = 0;
+  let pointsPlayer2 = 0;
 
   const [player1, setPlayer1] = useState("");
   const [player2, setPlayer2] = useState("");
@@ -24,6 +26,9 @@ export default function Quiz() {
   const [alternativeTwo, setAlternativeTwo] = useState("");
   const [alternativeThree, setAlternativeThree] = useState("");
   const [alternativeFour, setAlternativeFour] = useState("");
+  const [scorePlayer01, setScorePlayer01] = useState(0);
+  const [scorePlayer02, setScorePlayer02] = useState(0);
+  const [qtdConfirm, setQtdConfirm] = useState([]);
 
   const questions01 = db.questions[0];
   const questions02 = db.questions[1];
@@ -58,25 +63,26 @@ export default function Quiz() {
   }, []);
 
   function handleSubmitQuiz(id) {
-    console.log(id);
+    setQtdConfirm([...qtdConfirm, id]);
     setComfirm(true);
     document.getElementById(id).style.transform = "rotateY(180deg)";
+
+    scorePlayers(id);
   }
 
   function handleOnChange(index, id) {
-    console.log(index, id);
     verifyID(index, id);
 
     if (indexBefore != index) {
       document.getElementById(`question-${index}-${id}`).style.background =
-        "blue";
+        "green";
       document.getElementById(
         `question-${indexBefore}-${id}`
-      ).style.background = "green";
+      ).style.background = "#000";
       setIndexBefore(index);
     } else {
       document.getElementById(`question-${index}-${id}`).style.background =
-        "blue";
+        "green";
     }
   }
 
@@ -101,6 +107,53 @@ export default function Quiz() {
       setAlternativeFour(
         selectedAlternativeFour[selectedAlternativeFour.length - 1]
       );
+    }
+  }
+
+  function scorePlayers(card) {
+    switch (card) {
+      case "01":
+        if (alternativeOne == 2) {
+          if (scorePlayer01 == 0) {
+            setScorePlayer01(1);
+          } else {
+            pointsPlayer1 = 1 + scorePlayer01;
+            setScorePlayer01(pointsPlayer1);
+          }
+        }
+
+        console.log(scorePlayer01);
+        break;
+      case "02":
+        if (alternativeTwo == 3) {
+          if (scorePlayer02 == 0) {
+            setScorePlayer02(1);
+          } else {
+            pointsPlayer2 = 1 + scorePlayer02;
+            setScorePlayer02(pointsPlayer2);
+          }
+        }
+        break;
+      case "03":
+        if (alternativeThree == 1) {
+          if (scorePlayer01 == 0) {
+            setScorePlayer01(1);
+          } else {
+            pointsPlayer1 = 1 + scorePlayer01;
+            setScorePlayer01(pointsPlayer1);
+          }
+        }
+        break;
+      case "04":
+        if (alternativeFour == 0) {
+          if (scorePlayer02 == 0) {
+            setScorePlayer02(1);
+          } else {
+            pointsPlayer2 = 1 + scorePlayer02;
+            setScorePlayer02(pointsPlayer2);
+          }
+        }
+        break;
     }
   }
 
@@ -139,8 +192,46 @@ export default function Quiz() {
     border-radius: 10px;
   `;
 
+  const Scoreboard = styled.div`
+    width: 50%;
+    max-width: 80%;
+    padding: 25px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-left: 40px;
+      position: fixed;
+      z-index: 999;
+    }
+  `;
+
+  const ScoreboardText = styled.div`
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Comic Neue", cursive;
+    margin-bottom: 10px;
+  `;
+
+  const Score = styled.p`
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+  `;
+
   return (
     <Background>
+      <Scoreboard>
+        <ScoreboardText>Placar</ScoreboardText>
+        <Score>
+          {player1} {scorePlayer01} X {scorePlayer02} {player2}
+        </Score>
+      </Scoreboard>
       <Container>
         <FlipContainer>
           <CardOne id="01">
@@ -158,7 +249,7 @@ export default function Quiz() {
                 {questions01.alternatives.map((value, index) => {
                   return (
                     <div
-                      style={{ background: "green" }}
+                      style={{ background: "#000" }}
                       id={`question-${index}-1`}
                       key={index}
                     >
@@ -209,7 +300,7 @@ export default function Quiz() {
                 {questions02.alternatives.map((value, index) => {
                   return (
                     <div
-                      style={{ background: "green" }}
+                      style={{ background: "#000" }}
                       id={`question-${index}-2`}
                       key={index}
                     >
@@ -260,7 +351,7 @@ export default function Quiz() {
                 {questions03.alternatives.map((value, index) => {
                   return (
                     <div
-                      style={{ background: "green" }}
+                      style={{ background: "#000" }}
                       id={`question-${index}-3`}
                       key={index}
                     >
@@ -311,7 +402,7 @@ export default function Quiz() {
                 {questions04.alternatives.map((value, index) => {
                   return (
                     <div
-                      style={{ background: "green" }}
+                      style={{ background: "#000" }}
                       id={`question-${index}-4`}
                       key={index}
                     >
@@ -333,7 +424,9 @@ export default function Quiz() {
                     </div>
                   );
                 })}
-                <Button type="submit">Confirmar</Button>
+                <div>
+                  <Button type="submit">Confirmar</Button>
+                </div>
               </form>
             </FlipContainerFront>
             <FlipContainerBack>

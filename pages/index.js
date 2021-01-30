@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 const BackgroundHome = styled.div`
-  background: url("https://cdn.pixabay.com/photo/2019/10/20/21/21/close-up-4564714_960_720.jpg");
+  background-color: #111112;
   flex: 1;
   background-size: cover;
   background-position: center;
@@ -36,6 +36,10 @@ const Input = styled.input`
   outline: 0;
   text-align: center;
   font-family: "Comic Neue", cursive;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -48,15 +52,19 @@ const Button = styled.button`
   cursor: pointer;
   font-weight: bold;
   color: #fff;
-  background-color: #7a172a;
+  background-color: #7272c4;
   border-radius: 10px;
   border: 0 none;
   outline: 0;
   font-family: "Comic Neue", cursive;
 
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
   &:hover {
-    transition: 0.3s;
-    background-color: #9c253c;
+    transition: 0.8s;
+    background-color: #5d5d99;
   }
 
   &:disabled {
